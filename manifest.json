@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "CopyCsdn",
+	"version": "1.0",
+	"description": "开启CSDN网站代码复制",
+	"author": "Hertz",
+	"icons":
+	{
+		"48": "imgs/icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "imgs/icon.png"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://blog.csdn.net/*","http://blog.csdn.net/*"],
+			"js": ["js/contentscript.js"],
+            "run_at": "document_start"
+		}
+	]
+}
